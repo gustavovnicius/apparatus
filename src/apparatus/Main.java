@@ -18,15 +18,12 @@ public class Main {
 
 		List<String> switchesState = Arrays.asList(sc.next().split(""));
 		List<String> lightsState = Arrays.asList(sc.next().split(""));
+		sc.close();
 
 		Collections.sort(switchesState);
 		Collections.sort(lightsState);
 
 		for (int i = 0; i < switchesState.size(); i++) {
-			if (!switchesState.get(i).equals(lightsState.get(i))) {
-				lights -= 1;
-				continue;
-			}
 			if (switchesState.get(i).equals("0")) {
 				lights -= 1;
 			}
